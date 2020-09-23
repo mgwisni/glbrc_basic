@@ -1,0 +1,504 @@
+// Layout
+// ------
+// Using a negative margin technique, made possible with Bourbon Neat, the page
+// is loaded in this order:
+
+// 1. Header
+// 2. Content
+// 3. Navigation menus
+// 4. Sidebar Left
+// 5. Sideabr Right
+//
+// Layout rules.
+// (Disclaimer: do not change if you're not sure you know what you're doing.)
+
+#header {
+  padding: 2rem 0;
+}
+
+
+.container {
+  @include outer-container;
+
+  width: auto;
+}
+
+#content {
+  .no-sidebar & {
+    // 100% width for small screens. No definitions required.
+    // Same logic for medium screens. No definitions required.
+    // Same logic for large screens. No definitions required.
+ 
+  }
+
+  .one-sidebar.sidebar-second & {
+    // 100% width for small screens. No definitions required.
+    // Span this div 6 columns wide for medium screens.
+    @include media($medium-screen-up) {
+      @include span-columns(6);
+    }
+
+
+    // Span this div 8 columns wide for large screens.
+    @include media($large-screen-up) {
+      @include span-columns(8);
+    }
+  }
+
+  .one-sidebar.sidebar-first & {
+    // 100% width for small screens. No definitions required.
+    // Span this div 6 columns wide for medium screens.
+    @include media($medium-screen-up) {
+      @include span-columns(6);
+      @include shift(2);
+    }
+
+
+    // Span this div 9 columns wide for large screens.
+    @include media($large-screen-up) {
+      @include span-columns(9);
+      @include shift(3);
+    }
+  }
+
+  .two-sidebars & {
+    // 100% width for small screens. No definitions required.
+    // Span this div 4 columns wide for medium screens.
+    @include media($medium-screen-up) {
+      @include span-columns(4);
+      @include shift(2);
+    }
+
+
+    // Span this div 5 columns wide for large screens.
+    @include media($large-screen-up) {
+      @include span-columns(5);
+      @include shift(3);
+    }
+  }
+}
+
+#sidebar-first {
+  // 100% width for small screens. No definitions required.
+  // Span this div 2 columns wide for medium screens.
+  @include media($medium-screen-up) {
+    @include span-columns(2);
+
+    // Shift it to the left to place it in the far left column. Different shift for two-sidebar and one-sidebar layout.
+    @include shift(-6);
+
+    .one-sidebar.sidebar-first & {
+      @include shift(-8);
+    }
+  }
+
+
+  @include media($large-screen-up) {
+    // Span this div 3 columns wide for large screens.
+    @include span-columns(3);
+
+    // Shift it to the left to place it in the far left column. Different shift for two-sidebar and one-sidebar layout.
+    @include shift(-8);
+
+    .one-sidebar.sidebar-first & {
+      @include shift(-12);
+    }
+  }
+}
+
+#sidebar-second {
+  // 100% width for small screens. No definitions required.
+  // Span this div 2 columns wide for medium screens.
+  @include media($medium-screen-up) {
+    @include span-columns(2);
+    @include shift(0);
+  }
+
+
+  @include media($large-screen-up) {
+    // Span this div 4 columns wide for large screens.
+    @include span-columns(4);
+    @include shift(0);
+  }
+}
+
+#footer {
+  float: none;
+  clear: both;
+  margin-top: 1rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  @include media($eighthundo-screen-up) {
+    margin-top: 2rem;
+  }
+}
+.region-footer-top, .region-footer-middle, .region-footer-bottom {
+  @include row();
+}
+.region-footer-middle, .region-footer-bottom {
+  margin-bottom: 1rem;
+  @include media($large-screen-up) {
+    //margin-bottom: 3rem;
+  }
+}
+
+// Region Colors. Delete when starting a new theme.
+#header, #footer,
+#sidebar-first,
+#sidebar-second,
+#navigation {
+  //background: rgba(#aaa, 0.2);
+}
+
+// Layout Helpers
+#header,
+#footer,
+.mission,
+.breadcrumb,
+.node {
+  clear: both;
+}
+
+/**
+ * Custom Layouts
+ *
+*/
+.region-header, .region-content, .region-lower, .region-footer, .region-featured, .region-callout {
+  @include row();
+}
+
+.view--row {
+  .views-row {
+    @include row();
+  }
+}
+
+/* Prevent empty regions from collapsing */
+.region-left, .region-middle, .region-right, .region-lower-left, .region-lower-right {
+  min-height: 1px;
+}
+
+// GLBRC two column stacked layout
+.glbrc-layout {
+  // @include outer-container;
+}
+.two-column {
+  .region-left {
+    @include media($large-screen-up) {
+      @include span-columns(9);
+    }
+  }
+  .region-right {
+    @include media($large-screen-up) {
+      @include span-columns(3);
+    }
+  }
+  &.two-column--sidebar {
+    .region-left {
+      @include media($large-screen-up) {
+        @include span-columns(3);
+      }
+    }
+    .region-right {
+      @include media($large-screen-up) {
+        @include span-columns(9);
+      }
+    }
+  }
+  &.mobile-right-top {
+    .region-left {
+      @include media($large-screen-up) {
+        @include span-columns(9);
+        @include shift(-12);
+      }
+    }
+    .region-right {
+      @include media($large-screen-up) {
+        @include span-columns(3);
+        @include shift(9);
+        // @include omega;
+      }
+    }
+  }
+}
+.two-column--stacked { 
+  
+}
+
+// Three column stacked layout
+.three-column {
+  .region-left {
+    @include media($medium-screen-up) {
+      @include span-columns(2);
+    }
+    @include media($large-screen-up) {
+      @include span-columns(3);
+    }
+  }
+  .region-middle {
+    @include media($medium-screen-up) {
+      @include span-columns(6);
+      @include omega;
+    }
+    @include media($large-screen-up) {
+      @include span-columns(6);
+    }
+  }
+  .region-right {
+    @include media($medium-screen-up) {
+      @include span-columns(6);
+      // @include shift(2);
+      @include omega;
+    }
+    @include media($large-screen-up) {
+      // @include shift(0);
+      @include span-columns(3);
+    }
+  }
+  &.mobile-right-top {
+    .region-middle-right {
+      @include media($medium-screen-up) {
+        @include span-columns(6);
+      }
+      @include media($large-screen-up) {
+        @include span-columns(9);
+      }
+    }
+    .region-middle-right-header {
+      @include media($medium-screen-up) {
+        @include span-columns(6 of 6);
+      }
+      @include media($large-screen-up) {
+        @include span-columns(9 of 9);
+        @include omega;
+      }
+    }
+    .region-middle {
+      @include media($medium-screen-up) {
+        @include span-columns(6 of 6);
+        float: none;
+      }
+      @include media($large-screen-up) {
+        // @include span-columns(6 of 9);
+        // @include shift(-9 of 9);
+      }
+    }
+    .region-right {
+      @include media($fourfifty-screen-up) {
+        float: right;
+        width: 40%;
+        margin: 0 0 1rem 1rem;
+      }
+      @include media($medium-screen-up) {
+        // float: right;
+        // width: 40%;
+        // margin: 0 0 1rem 1rem;
+      }
+      @include media($large-screen-up) {
+        // @include span-columns(3 of 9);
+        // @include shift(6 of 9);
+        // @include omega;
+        width: 30%;
+      }
+    }
+  }
+}
+
+// Three column, Two column stacked layout
+.three-column--two-column {
+  .region-middle-right {
+    @include media($medium-screen-up) {
+      @include span-columns(6);
+    }
+    @include media($large-screen-up) {
+      @include span-columns(9);
+    }
+    .region-middle {
+      @include media($medium-screen-up) {
+        @include span-columns(6 of 6);
+      }
+      @include media($large-screen-up) {
+        @include span-columns(6 of 9);
+      }
+    }
+    .region-right {
+      @include media($medium-screen-up) {
+        @include span-columns(0 of 6);
+      }
+      @include media($large-screen-up) {
+        @include span-columns(3 of 9);
+        @include omega;
+      }
+    }
+    .region-lower-right {
+      @include media($medium-screen-up) {
+        @include span-columns(6 of 6);
+      }
+      @include media($large-screen-up) {
+        @include span-columns(9 of 9);
+        @include omega;
+      }
+    }
+  }
+}
+
+// Three column, Inner Header two column stacked layout
+.three-column--inner-header {
+  .region-middle-right {
+    @include media($medium-screen-up) {
+      @include span-columns(6);
+    }
+    @include media($large-screen-up) {
+      @include span-columns(9);
+    }
+    .region-middle-right-header {
+      @include media($medium-screen-up) {
+        @include span-columns(6 of 6);
+      }
+      @include media($large-screen-up) {
+        @include span-columns(9 of 9);
+        @include omega;
+      }
+    }
+    .region-middle {
+      @include media($medium-screen-up) {
+        @include span-columns(6 of 6);
+      }
+      @include media($large-screen-up) {
+        @include span-columns(6 of 9);
+      }
+    }
+    .region-right {
+      @include media($medium-screen-up) {
+        @include span-columns(6 of 6);
+      }
+      @include media($large-screen-up) {
+        @include span-columns(3 of 9);
+        @include omega;
+      }
+    }
+  }
+}
+
+// Three column, Inner stacked layout
+.three-column--inner-stacked {
+  .region-middle-right {
+    @include media($medium-screen-up) {
+      @include span-columns(6);
+    }
+    @include media($large-screen-up) {
+      @include span-columns(9);
+    }
+    .region-middle-right-header {
+      @include media($medium-screen-up) {
+        @include span-columns(6 of 6);
+      }
+      @include media($large-screen-up) {
+        @include span-columns(9 of 9);
+        @include omega;
+      }
+    }
+    .region-middle {
+      @include media($medium-screen-up) {
+        @include span-columns(6 of 6);
+      }
+      @include media($large-screen-up) {
+        @include span-columns(6 of 9);
+      }
+    }
+    .region-right {
+      @include media($medium-screen-up) {
+        @include span-columns(6 of 6);
+      }
+      @include media($large-screen-up) {
+        @include span-columns(3 of 9);
+        @include omega;
+      }
+    }
+    .region-middle-right-footer {
+      @include media($medium-screen-up) {
+        @include span-columns(6 of 6);
+      }
+      @include media($large-screen-up) {
+        @include span-columns(9 of 9);
+        @include omega;
+      }
+    }
+  }
+}
+
+/* Home page layout */
+.glbrc-layout__home {
+  .region-hero {
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    position: relative;
+  }
+  .region-hero--inner {
+    // display: flex;
+    // justify-content: space-around;
+    // max-width: 1400px;
+    // align-items: center;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    padding: 0.5rem;
+    @include media($medium-screen-up) {
+      padding: 1rem 1rem;
+    }
+    @include media($eighthundo-screen-up) {
+      padding: 0 2rem;
+    }    
+    @include media($large-screen-up) {
+    }
+
+  }
+  .block-region-heroinner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    @include media($medium-screen-up) {
+      align-items: flex-start;
+    }
+    @include media($eighthundo-screen-up) {
+      align-items: center;
+    }
+  }
+  .region-top {
+
+  }
+  .region-featured__left, .region-featured__middle, .region-featured__right {
+    @include media($medium-screen-up) {
+      @include span-columns(4 of 12);
+    }
+    @include media($large-screen-up) {
+      @include span-columns(4);
+    }
+  }
+  .region-footer__left, .region-footer__right {
+    @include media($medium-screen-up) {
+      @include span-columns(4);
+    }
+    @include media($large-screen-up) {
+      @include span-columns(6);
+    }
+  }
+}
+
+/* Home page alternate layout */
+.glbrc-layout__home__alt {
+  .region-hero {
+
+  }
+  .region-top {
+    
+  }
+}
+
+.region-middle-right-header {
+  //margin-bottom: 1rem;
+}

@@ -1,0 +1,235 @@
+glbrc_layout_1col:
+  label: 1 Column layout
+  category: GLBRC Layouts
+  template: templates/layouts/glbrc-1col
+  icon: templates/layouts/glbrc-1col.png
+  regions:
+    middle:
+      label: Middle
+
+glbrc_layout_2col_stacked:
+  label: 2 Column Stacked layout
+  category: GLBRC Layouts
+  template: templates/layouts/glbrc-2col-stacked
+  icon: templates/layouts/glbrc-2col-stacked.png
+  regions:
+    header:
+      label: Header
+    left:
+      label: Left
+    right:
+      label: Right
+    footer:
+      label: Footer
+
+glbrc_2col_sidebar_stacked:
+  label: 2 Column Stacked layout with Sidebar
+  category: GLBRC Layouts
+  template: templates/layouts/glbrc-2col-sidebar-stacked
+  icon: templates/layouts/glbrc-2col-sidebar-stacked.png
+  regions:
+    header:
+      label: Header
+    left:
+      label: Left
+    right:
+      label: Right
+    footer:
+      label: Footer
+
+glbrc_layout_2col_stacked_indent:
+  label: 2 Column Stacked - Indented Text layout
+  category: GLBRC Layouts
+  template: templates/layouts/glbrc-2col-stacked-indent
+  icon: templates/layouts/glbrc-2col-stacked-indent.png
+  regions:
+    header:
+      label: Header
+    left:
+      label: Left
+    right:
+      label: Right
+    footer:
+      label: Footer
+
+glbrc_layout_2col_stacked_mobile_right_top:
+  label: 2 Column Stacked - Mobile right top
+  category: GLBRC Layouts
+  template: templates/layouts/glbrc-2col-stacked-mobile-right-top
+  icon: templates/layouts/glbrc-2col-stacked-mobile-right-top.png
+  regions:
+    header:
+      label: Header
+    left:
+      label: Left
+    right:
+      label: Right
+    footer:
+      label: Footer
+
+glbrc_layout_3col_stacked:
+  label: 3 Column Stacked layout
+  category: GLBRC Layouts
+  template: templates/layouts/glbrc-3col-stacked
+  icon: templates/layouts/glbrc-3col-stacked.png
+  regions:
+    header:
+      label: Header
+    left:
+      label: Left
+    middle:
+      label: Middle
+    right:
+      label: Right
+    footer:
+      label: Footer
+
+glbrc_layout_3col_stacked_mobile_right_top:
+  label: 3 Column Stacked - Mobile right top
+  category: GLBRC Layouts
+  template: templates/layouts/glbrc-3col-stacked-mobile-right-top
+  icon: templates/layouts/glbrc-3col-stacked-mobile-right-top.png
+  regions:
+    header:
+      label: Header
+    left:
+      label: Left
+    middlerightheader:
+      label: Inner Header
+    middle:
+      label: Middle
+    right:
+      label: Right
+    footer:
+      label: Footer
+
+glbrc_layout_3col_stacked_news:
+  label: 3 Column Stacked News layout
+  category: GLBRC Layouts
+  template: templates/layouts/glbrc-3col-stacked-news
+  icon: templates/layouts/glbrc-3col-stacked-news.png
+  regions:
+    header:
+      label: Header
+    left:
+      label: Left
+    middle:
+      label: Middle
+    right:
+      label: Right
+    footer:
+      label: Footer
+
+glbrc_layout_3col_2col_stacked:
+  label: 3 Column - 2 Column Stacked layout
+  category: GLBRC Layouts
+  template: templates/layouts/glbrc-3col-2col-stacked
+  icon: templates/layouts/glbrc-3col-2col-stacked.png
+  regions:
+    header:
+      label: Header
+    left:
+      label: Top Left
+    middle:
+      label: Top Middle
+    right:
+      label: Top Right
+    lowerright:
+      label: Lower Right
+    footer:
+      label: Footer
+
+glbrc_layout_3col_header_2col_stacked:
+  label: 3 Column - Inner Header, 2 Column Stacked layout
+  category: GLBRC Layouts
+  template: templates/layouts/glbrc-3col-header-2col-stacked
+  icon: templates/layouts/glbrc-3col-header-2col-stacked.png
+  regions:
+    header:
+      label: Header
+    left:
+      label: Top Left
+    middlerightheader:
+      label: Inner Header
+    middle:
+      label: Middle
+    right:
+      label: Right
+    footer:
+      label: Footer
+
+glbrc_layout_3col_inner_stacked:
+  label: 3 Column - Inner Stacked layout
+  category: GLBRC Layouts
+  template: templates/layouts/glbrc-3col-inner-stacked
+  icon: templates/layouts/glbrc-3col-inner-stacked.png
+  regions:
+    header:
+      label: Header
+    left:
+      label: Top Left
+    middlerightheader:
+      label: Inner Header
+    middle:
+      label: Middle
+    right:
+      label: Right
+    middlerightfooter:
+      label: Inner Footer
+    footer:
+      label: Footer
+
+glbrc_layout_home:
+  label: Layout for the home page
+  category: GLBRC Layouts
+  template: templates/layouts/glbrc-home
+  icon: templates/layouts/glbrc-home.png
+  regions:
+    header:
+      label: Header
+    featuredleft:
+      label: Feature Left
+    featuredmiddle:
+      label: Feature Middle
+    featuredright:
+      label: Feature Right
+    callout:
+      label: Full Width Callout
+    footerleft:
+      label: Footer Left
+    footerright:
+      label: Footer Right
+
+glbrc_layout_home_alt:
+  label: Alternate layout for the home page
+  category: GLBRC Layouts
+  template: templates/layouts/glbrc-home-alt
+  icon: templates/layouts/glbrc-home-alt.png
+  regions:
+    hero:
+      label: Hero
+    heroinner:
+      label: Hero Inner
+    top:
+      label: Top
+    featuredleft:
+      label: Feature Left
+    featuredmiddle:
+      label: Feature Middle
+    featuredright:
+      label: Feature Right
+    callout:
+      label: Full Width Callout
+    footerleft:
+      label: Footer Left
+    footerright:
+      label: Footer Right
+
+glbrc_blockquote:
+  label: Blockquote
+  category: GLBRC Layouts
+  template: templates/layouts/glbrc-blockquote
+  regions:
+    blockquote:
+      label: Blockquote
+

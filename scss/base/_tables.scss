@@ -1,0 +1,45 @@
+// Table styles
+table {
+  border-collapse: collapse;
+  margin: 0 0 1.5rem;
+  table-layout: fixed;
+  width: 100%;
+  tbody {
+    td {
+      &:first-child {
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+th {
+  //border-bottom: 1px solid shade($base-border-color, 25%);
+  border-bottom: $base-border;
+  //font-family: $myriad-font-family;
+  font-weight: 700;
+  padding: $small-spacing 0;
+  text-align: left;
+}
+
+td {
+  border-bottom: $base-border;
+  line-height: 1.2;
+  padding: $small-spacing 0;
+}
+
+tr,
+td,
+th {
+  vertical-align: middle;
+}
+
+.views-element-container {
+  table {
+    tr {
+      &:hover {
+        background-color: $gray-bg;
+      }
+    }
+  }
+}

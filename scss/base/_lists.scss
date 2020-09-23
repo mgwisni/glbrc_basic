@@ -1,0 +1,26 @@
+// List styles
+ul, ol {
+  margin: 0;
+  &.menu {
+  	list-style-type: none;
+  	padding: 0;
+  }
+  + p {
+    margin-top: 1.5rem;
+  }
+}
+
+
+
+dl {
+  margin-bottom: $small-spacing;
+}
+
+dt {
+  font-weight: 600;
+  margin-top: $small-spacing;
+}
+
+dd {
+  margin: 0;
+}

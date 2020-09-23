@@ -1,0 +1,35 @@
+glbrc.mobile:
+  label: mobile
+  mediaQuery: '(min-width: 0px)'
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
+glbrc.small:
+  label: small screen
+  mediaQuery: 'all and (min-width: 20em)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+glbrc.medium:
+  label: medium screen
+  mediaQuery: 'all and (min-width: 40em)'
+  weight: 2
+  multipliers:
+    - 1x
+    - 2x
+glbrc.large:
+  label: large screen
+  mediaQuery: 'all and (min-width: 56.25em)'
+  weight: 3
+  multipliers:
+    - 1x
+    - 2x   
+glbrc.xlarge:
+  label: xlarge screen
+  mediaQuery: 'all and (min-width: 75em)'
+  weight: 4
+  multipliers:
+    - 1x
+    - 2x

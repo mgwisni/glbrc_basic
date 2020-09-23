@@ -1,0 +1,187 @@
+// Typographic styles
+html {
+  //font-size: 1.125em;
+}
+
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-kerning: normal;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: $base-line-height;
+  padding: 0 1rem;
+  //letter-spacing: $base-letter-spacing;
+}
+
+.wf-loading {
+  h1, h2, h3, h4, h5, h6, p, li, a, span, div {
+    visibility: hidden;
+  }
+}
+.wf-active {
+  h1, h2, h3, h4, h5, h6, p, li, a, span, div {
+    visibility: visible;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  //visibility: visible;
+  color: $dark-gray;
+  // font-size: $base-font-size;
+  line-height: $heading-line-height;
+  margin: 0 0 $small-spacing;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $heading-font-family;
+}
+
+
+h1 {
+  font-size: 1.62rem;
+}
+
+h2 {
+  font-size: 1.35rem;
+}
+h3 {
+  font-size: 1.125rem;
+}
+h4, h5 {
+  font-size: 1rem;
+}
+
+@media print, screen and (min-width: $medium-screen) {
+  h1 {
+    margin-top: 0;
+    font-size: 2.333rem;
+  }
+
+  h2 {
+    font-size: 1.944rem;
+  }
+
+  h3 {
+    font-size: 1.62rem;
+  }
+
+  h4 {
+    font-size: 1.35rem;
+  }
+  h5, h6 {
+    font-size: 1.125rem;
+  }
+}
+
+p {
+  margin: 0 0 1.5rem;
+}
+
+a {
+  color: $action-color;
+  text-decoration: none;
+  transition: color $base-duration $base-timing;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: shade($action-color, 25%);
+  }
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: $base-spacing 0;
+}
+
+// Code
+pre, code, tt {
+  font: 1rem "andale mono", "lucida console", monospace;
+  line-height: 1.5;
+}
+
+pre {
+  background-color: #efefef;
+  display: block;
+  padding: 5px;
+  margin: 5px 0;
+  border: 1px solid #aaaaaa;
+}
+
+// Abbreviation
+abbr {
+  border-bottom: 1px dotted #666666;
+  cursor: help;
+  white-space: nowrap;
+}
+
+blockquote {
+  border-left: 8px solid $glbrc-blue-dark;
+  padding-left: 1rem;
+  // float: left;
+  margin-left: 0;
+  margin-right: 0;
+  //font-weight: 700;
+  font-family: $myriad-font-family;
+  //color: $medium-gray;
+  h2 {
+    color: $base-font-color;
+    font-size: 1.194rem;
+    margin-top: 0;
+    // font-weight: 800;
+    //text-transform: uppercase;
+  }
+  span {
+    display: block;
+  }
+  .blockquote__quote {
+    font-size: 1.5rem;
+    p {
+      display: inline;
+      font-size: 1.5rem;
+      margin-left: 0 !important;
+      max-width: 100% !important;
+    }
+    
+  }
+  #quote1 {
+    &::before {
+      content: open-quote;
+    }
+    &::after {
+      content: close-quote;
+    }
+  }
+  cite, + cite {
+    // padding-left: rem-calc(20);
+    // padding-right: rem-calc(20);
+    font-style: normal;
+    font-size: 0.9rem;
+    ont-weight: 700;
+    text-transform: uppercase;
+    margin: 1rem 0 0 1.5rem;
+    display: block;
+    &:before {
+      content: "\2014";
+    }
+  }
+  cite {
+    margin-left: 0;
+  }
+  @include media($large-screen-up) {
+    @include span-columns(20);
+    @include shift(-4);
+  }
+}

@@ -1,0 +1,109 @@
+// Variables
+// -----------
+// Use the same color all over the place? Need to do some math with height and
+// width and text size? Sass supports variables as well as basic math operations
+// and many useful functions.
+
+// For complete documentation:
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_
+
+// Margin/Padding
+$margin: $gutter;
+$padding: $gutter;
+
+// Typography
+$verlag-font-family: "Verlag", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$serif-font-family: Georgia,Times New Roman,Times,serif !default;
+$vitesse-font-family: "Vitesse", "Helvetica Neue", "Helvetica", "Arial" !default;
+
+$meta-font-family: "ff-meta-serif-web-pro",serif;
+$proxima-font-family: "proxima-nova",sans-serif;
+$proxima-condensed-font-family: "proxima-nova-condensed",sans-serif;
+$proxima-extra-font-family: "proxima-nova-extra-condensed",sans-serif;
+$myriad-font-family: "myriad-pro", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$myriad-condensed-font-family: "myriad-pro-condensed",sans-serif;
+$minion-font-family: "minion-pro",'Adobe Garamond Pro', Georgia, Times, serif;
+
+//$base-font-family: $verlag-font-family;
+//$heading-font-family: $verlag-font-family;
+
+$base-font-family: $minion-font-family;
+$heading-font-family: $myriad-font-family;
+
+// Font Sizes
+$base-font-size: $font-size;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.3;
+
+// Letter spacing
+$base-letter-spacing: 0.03rem;
+
+// Other Sizes
+$base-border-radius: 2px;
+// $base-spacing: $base-line-height * 1em;
+$base-spacing: 1rem;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+// $dark-gray: #333;
+// $medium-gray: #999;
+// $light-gray: #ddd;
+
+$glbrc-blue-dark: #005387;
+$glbrc-blue-light: #009bda;
+$glbrc-green: #71bf44;
+$glbrc-grey: #828282;
+$glbrc-orange: #f7941e;
+
+$usa-blue: #0071bc;
+$usa-gray: #5b616b;
+
+$uw-red: #c5050c !default;
+$uw-red-dark: #9B0000 !default;
+$blue: #477dca !default;
+$uw-gray-blue: #dadfe1 !default;
+$black: #282728 !default;
+$uw-gray-darkest: #282728 !default;
+$uw-gray-darker: #646569 !default;
+$dark-gray: #494949 !default;
+$medium-gray: #7b7b7b !default;
+$light-gray: #dfdfdf !default;
+$gray-lightest: #f1f1f1 !default;
+$gray-bg: #f7f7f7 !default;
+$gray-footer-text: #cfcfcf !default;
+$gray-footer-text-hover: #f9f9f9 !default;
+$white: #fff;
+//$black: #000;
+
+// Brand Colors
+// $primary-color: #555;
+$primary-color: $glbrc-blue-dark;
+
+// Action Colors
+$status-color: #8dbe51;
+$warning-color: #ddc44f;
+$error-color: #cd4533;
+
+// Font Colors
+//$base-font-color: $dark-gray;
+$base-font-color: $black;
+$action-color: $usa-blue;
+
+// Border
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$base-background-color: #fff;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
